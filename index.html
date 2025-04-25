@@ -50,21 +50,29 @@
     <h4>Editing Video Menggunakan Alight Motion & CapCut</h4>
     <p>Saya memiliki kemampuan dalam mengedit video menggunakan aplikasi <b>Alight Motion</b> dan <b>CapCut</b>, mulai dari efek <i>jedag-jedug</i>, <i>typography</i>, hingga <i>AMV</i> (Anime Music Video).</p>
 
-    <div class="project-slider-container">
+    <div class="slider-wrapper">
+  <button class="arrow left" onclick="scrollLeft()">&#60;</button>
   <div class="project-slider">
     <img src="Projek1.jpg" alt="Project 1">
     <img src="Projek2.jpg" alt="Project 2">
     </div>
-        <button class="slide-btn" onclick="scrollToNextSlide()">Slide Foto</button>
+        
 <script>
-function scrollToNextSlide() {
-  const slider = document.querySelector('.project-slider');
-  slider.scrollBy({
-    left: window.innerWidth,  // Geser satu layar penuh
+function scrollLeft() {
+  document.querySelector('.project-slider-container').scrollBy({
+    left: -300,
     behavior: 'smooth'
   });
 }
-<script>
+
+function scrollRight() {
+  document.querySelector('.project-slider-container').scrollBy({
+    left: 300,
+    behavior: 'smooth'
+  });
+}
+</script>
+
     <p><b>Catatan:</b> Saat ini aktivitas editing sedang dihentikan sementara karena keterbatasan perangkat.</p>
 </section>
 
