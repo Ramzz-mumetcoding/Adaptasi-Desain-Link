@@ -56,6 +56,16 @@
     <img src="Projek2.jpg" alt="Project 2">
     </div>
         <button class="slide-btn" onclick="scrollToNextSlide()">Slide Foto</button>
+        <script>
+  function scrollToNextSlide() {
+    const slider = document.querySelector('.slide-container');
+    slider.scrollBy({
+      left: window.innerWidth, // Geser satu layar penuh
+      behavior: 'smooth'
+    });
+  }
+        </script>
+        
         
 </div>
 
