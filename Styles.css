@@ -242,6 +242,13 @@ body {
   box-sizing: border-box;
 }
 
+.project-slide img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 .contact-icons {
     display: flex;
     justify-content: center;
