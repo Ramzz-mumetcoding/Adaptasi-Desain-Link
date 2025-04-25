@@ -226,15 +226,17 @@ body {
 
 .slide-btn {
   padding: 10px 20px;
-  background-color: red;  /* Ganti ke warna merah */
+  background-color: red;  /* Warna merah */
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
 }
 
 .slide-btn:hover {
-  background-color: darkred;  /* Ganti warna saat hover */
+  background-color: darkred;
 }
 
 .contact-icons {
