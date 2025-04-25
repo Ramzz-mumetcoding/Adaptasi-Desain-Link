@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+}
+
+header {
+  position: fixed;
+    top: 0;
+    z-index: 999;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    width: auto; /* Biarkan lebarnya menyesuaikan konten menu */
+    background-color: rgba(0, 0, 0, 0.7); /* Ganti warna latar belakang menjadi hitam semi-transparan */
+    padding: 8px 15px; /* Padding di sekitar menu */
+    border-radius: 20px; /* Membuat sudut melengkung */
+    margin-left: 10px; /* Tambahkan margin kiri untuk memindahkannya ke kiri */
+}
+
+.buatmencari {
+    display: flex;
+    align-items: center;
+    padding: 5px 0px;
+    border-radius: 2px;
+}
+
+.buatmencari input[type="text"] {
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    margin-left: 0px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: 5;
+    padding: 0;
+}
+
+ul li {
+    margin-left: 14px;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+ul li a.active,
+ul li a:hover {
+    color: red;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+}
+
+.bannerintro {
+    height: 300px;
+    background-image: url('Banner1.jpg'); /* ganti sama gambarmu */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 30px; /* Membuat sudut melengkung */
+}
+
+.bannerintro {
+    width: 100%; /* Pastikan lebarnya 100% */
+    display: block; /* Pastikan ini adalah elemen blok, akan menempati baris baru */
+}
+
+.bannerintro { /* Menargetkan .intro yang ada di dalam .intro-below-banner */
+    text-align: center;
+    padding: 20px; /* Anda bisa menyesuaikan padding di sini */
+    /* margin-top: ... ; Anda bisa menambahkan margin-top jika perlu memberi jarak antara banner dan teks */
+    
+}.intro h1 {
+    font-size: 1.5em;
+    margin-bottom: 0px;
+    background-color: transparent !important;
+    margin-top: 30px; /* Tambah nilai margin di atas teks "Halo" */
+}
+.intro p {
+    margin: 0px 0;
+    
+}.intro {
+    text-align: center;
+    padding: 30px; /* Tambah padding agar area hitam lebih besar di sekitar teks */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang hitam semi-transparan */
+    color: white;
+    border-radius: 5px;
+    width: 100%; /* Contoh: Lebar area hitam menjadi 80% dari banner */
+    max-width: 500px; /* Contoh: Lebar maksimum area hitam */
+    border-radius: 30px; /* Membuat sudut melengkung */
+}
+
+.intro h1 {
+    font-size: 3.5em;
+    margin-bottom: 2px; /* Tambah sedikit margin bawah untuk memberi jarak dengan teks berikutnya */
+    background-color: transparent !important;
+    line-height: 1.5; /* Menambah jarak antar baris pada teks "Halo" (mungkin tidak terlalu berpengaruh karena hanya satu baris) */
+}
+
+.intro p {
+    margin: 5px 0; /* Tambah margin atas dan bawah untuk memberi jarak antar paragraf */
+    line-height: 1.5; /* Menambah jarak antar baris pada paragraf */
+}
+
+.tombol {
+    display: inline-block;
+    margin-top: 30px; /* Tambah margin atas tombol agar lebih jauh dari paragraf terakhir */
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-photo-container {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.bannerabout {
+    width: 100%;
+    height: 100%;
+    background-image: url('Banner2.jpg'); /* Ganti sesuai nama file kamu */
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px; /* Tadi kurang 'px' */
+    border: none;
+    box-shadow: none;
+}
+
+.about-text {
+    padding:30px;
+    text-align: center;
+    font-size: 16px; /* Biar teksnya enak dibaca */
+    line-height: 1.6; /* Spasi antar baris biar rapi */
+}
+
+#projects {
+    padding: 20px;
+    color: white;
+}
+
+#projects h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+#projects h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#projects p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.project-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antar gambar */
+    margin-bottom: 20px;
+}
+
+.project-images img {
+    width: 200px; /* Atur lebar gambar */
+    height: auto;
+    border-radius: 10px; /* Biar sudut gambar sedikit membulat */
+}
+
+.project-slider-container {
+    width: 80%; /* Atur lebar container slider */
+    max-width: 600px; /* Lebar maksimum slider */
+    margin: 20px auto; /* Pusatkan slider secara horizontal */
+    overflow-x: auto; /* Aktifkan scroll horizontal */
+    scroll-snap-type: x mandatory; /* Aktifkan fitur scroll snap pada sumbu X */
+    -webkit-overflow-scrolling: touch; /* Untuk scrolling yang lebih halus di iOS */
+    scrollbar-width: none; /* Sembunyikan scrollbar di Firefox */
+    -ms-overflow-style: none; /* Sembunyikan scrollbar di IE dan Edge */
+}
+
+.project-slider-container::-webkit-scrollbar {
+    display: none; /* Sembunyikan scrollbar di Chrome, Safari, dan Opera */
+}
+
+.project-slider {
+    display: flex; /* Atur gambar dalam satu baris horizontal */
+}
+
+.project-slider img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    scroll-snap-align: center; 
+    border-radius: 10px; /* Biar sudut gambar sedikit membulat */
+    margin-right: 20px; /* Berikan jarak antar gambar saat di-slide */
+}
+
+.project-images {
+    margin-bottom: 0;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-icons .icon {
+    font-size: 32px;
+    color: white;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.contact-icons .icon:hover {
+    transform: scale(1.2);
+}
+
+.icon.whatsapp { color: #25D366; }
+.icon.instagram { color: #E1306C; }
+.icon.discord { color: #5865F2; }
+.icon.email { color: #FFA500; }
+.icon.youtube { color: #FF0000; }
+
+
+section {
+    padding: 50px 20px;
+    background-color: #1c1c1c;
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+}
+section {
+    padding: 50px 20px;
+    background-color: #1c1c1c;
+    margin: 10px 0;
+    position: relative; /* Untuk memposisikan pseudo-element */
+}section {
+    padding: 50px 20px;
+    background-color: #1c1c1c;
+    margin: 10px 0;
+    position: relative; /* Untuk memposisikan pseudo-element dan teks */
+}
+
+section:not(:first-of-type)::before {
+    content: "";
+    position: absolute;
+    top: -12px; /* Sesuaikan posisi vertikal garis */
+    left: 50%; /* Posisikan tengah garis di tengah section */
+    width: 100%; /* Panjang garis */
+    height: 8px; /* Ketebalan garis lebih tipis */
+    background-color: black; /* Warna garis */
+    transform: translateX(-50%); /* Posisikan tengah horizontal */
+    z-index: 1; /* Pastikan garis di bawah teks */
+}
+
+section:not(:first-of-type)::after {
+    content: "Web by Ramzz";
+    position: absolute;
+    top: -15px; /* Posisikan teks sedikit di atas garis */
+    left: 50%; /* Posisikan tengah teks di tengah section */
+    transform: translateX(-50%);
+    background-color: #1c1c1c; /* Warna latar belakang agar menutupi bagian garis */
+    color: white; /* Warna teks */
+    font-size: 0.5em; /* Ukuran font kecil */
+    padding: 0 1px; /* Berikan sedikit padding di sekitar teks */
+    z-index: 2; /* Pastikan teks di atas garis */
+}
