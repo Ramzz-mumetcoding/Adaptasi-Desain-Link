@@ -196,32 +196,41 @@ body {
     border-radius: 10px; /* Biar sudut gambar sedikit membulat */
 }
 
-.project-slider-container {
-    width: 80%; /* Atur lebar container slider */
-    max-width: 600px; /* Lebar maksimum slider */
-    margin: 20px auto; /* Pusatkan slider secara horizontal */
-    overflow-x: auto; /* Aktifkan scroll horizontal */
-    scroll-snap-type: x mandatory; /* Aktifkan fitur scroll snap pada sumbu X */
-    -webkit-overflow-scrolling: touch; /* Untuk scrolling yang lebih halus di iOS */
-    scrollbar-width: none; /* Sembunyikan scrollbar di Firefox */
-    -ms-overflow-style: none; /* Sembunyikan scrollbar di IE dan Edge */
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  width: 90%;
+  margin: auto;
 }
 
 .project-slider-container {
-  width: 80%; /* Lebar slider */
-  overflow-x: auto; /* Aktifkan scroll horizontal */
-  white-space: nowrap; /* Gambar tetap sejajar dalam satu baris */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 80%;
 }
 
 .project-slider {
-  display: flex; /* Susun gambar dalam baris horizontal */
+  display: flex;
 }
 
 .project-slider img {
-  width: 100%; /* Ukuran gambar sesuai lebar container */
-  height: auto;
-  flex-shrink: 0; /* Gambar tidak mengecil */
-  margin-right: 20px; /* Jarak antar gambar */
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.arrow {
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
 }
 
 .contact-icons {
