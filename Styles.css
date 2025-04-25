@@ -224,6 +224,19 @@ body {
     margin-right: 20px; /* Berikan jarak antar gambar saat di-slide */
 }
 
+.slide-btn {
+  padding: 10px 20px;
+  background-color: red;  /* Ganti ke warna merah */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.slide-btn:hover {
+  background-color: darkred;  /* Ganti warna saat hover */
+}
+
 .contact-icons {
     display: flex;
     justify-content: center;
