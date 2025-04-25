@@ -228,6 +228,20 @@ body {
     margin-bottom: 0;
 }
 
+.slide-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.project-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 .contact-icons {
     display: flex;
     justify-content: center;
