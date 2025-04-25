@@ -207,21 +207,21 @@ body {
     -ms-overflow-style: none; /* Sembunyikan scrollbar di IE dan Edge */
 }
 
-.project-slider-container::-webkit-scrollbar {
-    display: none; /* Sembunyikan scrollbar di Chrome, Safari, dan Opera */
+.project-slider-container {
+  width: 80%; /* Lebar slider */
+  overflow-x: auto; /* Aktifkan scroll horizontal */
+  white-space: nowrap; /* Gambar tetap sejajar dalam satu baris */
 }
 
 .project-slider {
-    display: flex; /* Atur gambar dalam satu baris horizontal */
+  display: flex; /* Susun gambar dalam baris horizontal */
 }
 
 .project-slider img {
-    width: 100%;
-    height: auto;
-    flex-shrink: 0;
-    scroll-snap-align: center; 
-    border-radius: 10px; /* Biar sudut gambar sedikit membulat */
-    margin-right: 20px; /* Berikan jarak antar gambar saat di-slide */
+  width: 100%; /* Ukuran gambar sesuai lebar container */
+  height: auto;
+  flex-shrink: 0; /* Gambar tidak mengecil */
+  margin-right: 20px; /* Jarak antar gambar */
 }
 
 .contact-icons {
