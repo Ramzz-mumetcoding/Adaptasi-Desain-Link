@@ -239,6 +239,10 @@ body {
   background-color: darkred;
 }
 
+.slide-btn {
+    z-index: 9999; /* Pastikan tombol berada di atas elemen lain */
+}
+
 .contact-icons {
     display: flex;
     justify-content: center;
