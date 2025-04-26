@@ -196,43 +196,68 @@ body {
     border-radius: 10px; /* Biar sudut gambar sedikit membulat */
 }
 
-.slider-wrapper {
-.slider-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 90%;
-  margin: auto;
-  margin-bottom: 30px; /* Tambahkan jarak bawah agar tidak nempel ke teks */
-}
-
 .project-slider-container {
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  width: 80%;
+    width: 80%; /* Atur lebar container slider */
+    max-width: 600px; /* Lebar maksimum slider */
+    margin: 20px auto; /* Pusatkan slider secara horizontal */
+    overflow: hidden; /* Menyembunyikan elemen yang melampaui batas container */ 
 }
 
 .project-slider {
-  display: flex;
+    display: flex; /* Atur gambar dalam satu baris horizontal */
+    transition: transform 0.5s ease; /* Haluskan transisi saat gambar berpindah */
 }
 
 .project-slider img {
-  flex-shrink: 0;
-  width: 100%;
-  max-width: 500px;
-  border-radius: 10px;
-  margin-right: 20px; /* Biar ada jarak antar gambar */
+    width: 100%;
+    height: auto;
+    flex-shrink: 0; /* Agar gambar tidak mengecil */
+    scroll-snap-align: center;
+    border-radius: 10px;
 }
 
-.arrow {
-  background-color: red;
-  color: white;
-  border: none;
-  font-size: 24px;
-  padding: 10px; /* Fix typo */
-  cursor: pointer;
-  border-radius: 50%;
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 30px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 0px; /* Posisi tombol prev di kiri */
+}
+
+.next {
+    right: 0px; /* Posisi tombol next di kanan */
+}
+
+button:active {
+    transform: translateY(-50%) scale(0.9);
+}
+
+.project-slider img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    scroll-snap-align: center; 
+    border-radius: 10px; /* Biar sudut gambar sedikit membulat */
+    margin-right: 20px; /* Berikan jarak antar gambar saat di-slide */
+}
+
+.project-images {
+    margin-bottom: 0;
 }
 
 
@@ -307,4 +332,4 @@ section:not(:first-of-type)::after {
     font-size: 0.5em; /* Ukuran font kecil */
     padding: 0 1px; /* Berikan sedikit padding di sekitar teks */
     z-index: 2; /* Pastikan teks di atas garis */
-}
+    }
