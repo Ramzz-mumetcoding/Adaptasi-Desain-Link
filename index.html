@@ -45,25 +45,21 @@
        </p>
   </div>
 </section>
-<section id="projects">
-  <h2>Projects</h2>
-  <h4>Editing Video Menggunakan Alight Motion & CapCut</h4>
-  <p>Saya memiliki kemampuan dalam mengedit video menggunakan aplikasi <b>Alight Motion</b> dan <b>CapCut</b>, mulai dari efek <i>jedag-jedug</i>, <i>typography</i>, hingga <i>AMV</i> (Anime Music Video).</p>
-
-  <div class="slider-wrapper">
-    <button class="arrow left" onclick="scrollLeft()">&#60;</button>
+   <section id="projects">
+    <h2>Projects</h2>
+    <h4>Editing Video Menggunakan Alight Motion & CapCut</h4>
+    <p>Saya memiliki kemampuan dalam mengedit video menggunakan aplikasi <b>Alight Motion</b> dan <b>CapCut</b>, mulai dari efek <i>jedag-jedug</i>, <i>typography</i>, hingga <i>AMV</i> (Anime Music Video).</p>
 
     <div class="project-slider-container">
-      <div class="project-slider">
-        <img src="Projek1.jpg" alt="Project 1">
-        <img src="Projek2.jpg" alt="Project 2">
-      </div>
+          <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+  <div class="project-slider">
+    <img src="projek1.jpg" alt="Project 1">
+    <img src="projek2.jpg" alt="Project 2">
     </div>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</div>
 
-    <button class="arrow right" onclick="scrollRight()">&#62;</button>
-  </div>
-
-  <p><b>Catatan:</b> Saat ini aktivitas editing sedang dihentikan sementara karena keterbatasan perangkat.</p>
+    <p><b>Catatan:</b> Saat ini aktivitas editing sedang dihentikan sementara karena keterbatasan perangkat.</p>
 </section>
 
     </section>
@@ -95,51 +91,23 @@
     <footer>
         <p>2025 - Tugas PJJ Progdas</p>
     </footer>
-      <p><b>Catatan:</b> Saat ini aktivitas editing sedang dihentikan sementara karena keterbatasan perangkat.</p>
-</section>
+    <script>
+        let slideIndex = 0;
 
-<section id="contact">
-  <h2>Contact Me</h2>
-  <div class="contact-icons">
-    <a href="https://wa.me/6285933641078" target="_blank" class="icon whatsapp" title="WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="https://instagram.com/ramzzxd17" target="_blank" class="icon instagram" title="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://discord.com/users/ramzz_xd1" target="_blank" class="icon discord" title="Discord">
-      <i class="fab fa-discord"></i>
-    </a>
-    <a href="mailto:spongebobcool4@gmail.com" class="icon email" title="Email">
-      <i class="fas fa-envelope"></i>
-    </a>
-    <a href="https://youtube.com/@RamzzAbsurdHumor" target="_blank" class="icon youtube" title="YouTube">
-      <i class="fab fa-youtube"></i>
-    </a>
-  </div>
-</section>
+        function moveSlide(direction) {
+            const slides = document.querySelectorAll('.project-slider img');
+            slideIndex += direction;
 
-<footer>
-  <p>2025 - Tugas PJJ Progdas</p>
-</footer>
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1;  // Jika di awal, pindah ke gambar terakhir
+            }
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;  // Jika di akhir, pindah ke gambar pertama
+            }
 
-<script>
-  function scrollLeft() {
-    document.querySelector('.project-slider-container').scrollBy({
-      left: -300,
-      behavior: 'smooth'
-    });
-  }
-
-  function scrollRight() {
-    document.querySelector('.project-slider-container').scrollBy({
-      left: 300,
-      behavior: 'smooth'
-    });
-  }
-</script>
-</body>
-</html>
-
+            const slider = document.querySelector('.project-slider');
+            slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+    </script>
 </body>
 </html>
